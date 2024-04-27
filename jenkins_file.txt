@@ -1,0 +1,12 @@
+inode('master') 
+{
+    stage('Continuous Download_Demo') 
+	{
+    git 'https://github.com/srikanthdl/webapp.git'
+	}
+    stage('Continuous Build_Demo') 
+	{
+    sh label: '', script: 'mvn package'
+	}
+    
+}
